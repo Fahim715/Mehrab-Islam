@@ -373,7 +373,7 @@ body {
 .gmg { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
 .gcard { background: var(--bg2); border: 1px solid var(--border); overflow: hidden; cursor: none; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: border-color .3s, transform .3s cubic-bezier(.4,0,.2,1); }
 .gcard:hover { border-color: var(--purple); transform: translateY(-4px); }
-.gthumb { height: 150px; background: var(--bg3); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; transition: transform .4s cubic-bezier(.4,0,.2,1); }
+.gthumb { height: 250px; background: var(--bg3); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; transition: transform .4s cubic-bezier(.4,0,.2,1); }
 .gcard:hover .gthumb { transform: scale(1.04); }
 .ggrid { position: absolute; inset: 0; opacity: .4; background-image: linear-gradient(var(--border) 1px,transparent 1px), linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size: 32px 32px; }
 .gbody { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
@@ -549,6 +549,12 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   .wst { padding: 24px 12px; }
   .wstn { font-size: 34px !important; }
 }
+
+.cert-img-wrap { width:100%; height:120px; overflow:hidden; margin-bottom:14px; cursor:none; position:relative; }
+.cert-img-wrap::after { content:''; position:absolute; inset:0; background:rgba(0,212,255,0); transition:background .2s; }
+.cert-img-wrap:hover::after { background:rgba(0,212,255,.08); }
+.cert-thumb { width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s; }
+.cert-img-wrap:hover .cert-thumb { transform:scale(1.04); }
 </style>
 </head>
 <body>
@@ -712,7 +718,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="tln d"></div>
         <div class="tlb">
           <div class="tlh"><div class="tlt">Undergraduate Thesis</div><div class="tlco"><a href="https://www.bracu.ac.bd" target="_blank" style="color:var(--cyan);text-decoration:none;">BRAC University</a></div><div class="tldt">Jun 2024 – Jun 2025</div></div>
-          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer. You can <a href="https://dspace.bracu.ac.bd/xmlui/handle/10361/26708" target="_blank" style="color:var(--pink);text-decoration:none;">click here to read the paper</a> if you're curious.</p>
+          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer.
           <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">Multithreading</span><span class="tltag">C/C++</span><span class="tltag">Research</span></div>
         </div>
       </div>
@@ -742,6 +748,10 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   <div class="wrap">
     <div class="eyebrow">skills.config</div>
     <h2 class="sec-h split-h">Technical <em>Skills</em></h2>
+    <div>
+    <p> I have learned and applied these technologies in various projects throughout my academic and professional journey.</p>
+    </br>
+    </div>
     <div class="skg">
 
       <!-- Languages -->
@@ -925,35 +935,35 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
 <section class="sec" id="games">
   <div class="sec-num">06</div>
   <div class="wrap">
-    <div class="eyebrow">side-projects/</div>
+    <div class="eyebrow">games.exe</div>
     <h2 class="sec-h split-h">Personal <em>Projects</em></h2>
+    <p class="rv" style="font-size:13px; color:var(--dim); margin-top:-28px; margin-bottom:40px; letter-spacing:1px;">▶ I Make Games As My New Hobbie</p>
     <div class="gmg">
-      <div class="rv gcard" data-cursor-label="PLAY">
-        <div class="gthumb"><div class="ggrid"></div>👻</div>
+      <a class="rv gcard" href="https://fahim715.github.io/cursed-haul/" target="_blank" data-cursor-label="PLAY" style="text-decoration:none;color:inherit;">
+        <div class="gthumb" style="padding:0;overflow:hidden;"><img src="images/cursed-haul.png" alt="Cursed Haul" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
         <div class="gbody">
-          <div class="gstat" style="color:var(--green)">● Live — Free to Play</div>
-          <div class="gname">Horror Maze Game</div>
-          <div class="gdesc">A browser-based horror maze game I built as a personal tinkering project. Navigate dark corridors to find the exit. Online and free to play.</div>
-          <div class="gtags"><span class="gtag">Browser Game</span><span class="gtag">Personal Project</span></div>
+          <div class="gstat" style="color:var(--green)">● Live — Click to Play</div>
+          <div class="gname">Cursed Haul</div>
+          <div class="gdesc">You wake up inside a pitch-black maze. Five stolen diamonds are hidden in the darkness — find them all, unlock the gate, and escape. But every diamond you collect draws the ghosts closer. And when you grab the last one, something far worse wakes up.</div>
+          <div class="gtags"><span class="gtag">Browser Game</span><span class="gtag">For PC or Laptop Only</span></div>
         </div>
-      </div>
+      </a>
       <div class="rv gcard" data-cursor-label="COMING SOON">
-        <div class="gthumb"><div class="ggrid"></div>🕹️</div>
+        <div class="gthumb" style="padding:0;overflow:hidden;"><img src="images/the-lighthouse.png" alt="The Lighthouse" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
         <div class="gbody">
-          <div class="gstat" style="color:var(--amber)">◐ In Progress</div>
-          <div class="gname">New Browser Game (TBA)</div>
-          <div class="gdesc">Another side project currently in development — a fun experiment I'm building in my spare time. Will deploy when it's ready.</div>
-          <div class="gtags"><span class="gtag">Side Project</span><span class="gtag">Coming Soon</span></div>
+          <div class="gstat" style="color:var(--amber)">◐ Coming Soon</div>
+          <div class="gname">The Lighthouse</div>
+          <div class="gtags"><span class="gtag">Coming Soon</span></div>
         </div>
       </div>
-      <div class="rv gcard" style="border-style:dashed;opacity:.4">
+      <!-- <div class="rv gcard" style="border-style:dashed;opacity:.4">
         <div class="gthumb"><div class="ggrid"></div><span style="font-size:32px;color:var(--dim)">＋</span></div>
         <div class="gbody"><div class="gname" style="color:var(--dim)">Add Your Game</div><div class="gdesc">Add another game project here.</div></div>
-      </div>
+      </div> -->
     </div>
-    <div class="rv" style="text-align:center;margin-top:32px">
+    <!-- <div class="rv" style="text-align:center;margin-top:32px">
       <a class="btn btn-g" href="https://github.com/yourname" target="_blank"><span class="btn-inner">View all on GitHub ↗</span></a>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -964,18 +974,18 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     <div class="eyebrow">why-me.txt</div>
     <h2 class="sec-h split-h">Why <em>Hire Me?</em></h2>
     <div class="whydg">
-      <div class="rv wcard"><span class="wico">⚡</span><div class="wtitle">Fast Learner</div><div class="wdesc">I've covered an unusually wide range of CS fields — from VLSI and assembly to AI and blockchain. I go deep fast, regardless of the domain.</div></div>
-      <div class="rv wcard"><span class="wico">🎯</span><div class="wtitle">Broad Technical Base</div><div class="wdesc">Systems, networks, databases, compilers, web, mobile, AI, robotics — I'm not a specialist in one lane. I understand how it all connects.</div></div>
-      <div class="rv wcard"><span class="wico">🔗</span><div class="wtitle">Leadership Track Record</div><div class="wdesc">BYLC leadership program, MUN delegate, Duke of Edinburgh Award — I've actively invested in leadership and communication skills alongside technical ones.</div></div>
-      <div class="rv wcard"><span class="wico">📦</span><div class="wtitle">Ships Real Things</div><div class="wdesc">I build and finish projects — an obfuscation tool, web apps, robotics systems. I deliver, not just prototype.</div></div>
-      <div class="rv wcard"><span class="wico">🤝</span><div class="wtitle">Collaborative & Adaptable</div><div class="wdesc">I've worked in teams, volunteered, competed internationally, and represented a country in MUN. I function well in diverse, high-stakes environments.</div></div>
-      <div class="rv wcard"><span class="wico">🌱</span><div class="wtitle">Open to Any Role</div><div class="wdesc">CS, business, tech management, research — I don't limit myself. If the problem is interesting and the team is good, I'm in.</div></div>
+      <div class="rv wcard"><span class="wico">🌱</span><div class="wtitle">Eager to Learn</div><div class="wdesc">I'm early in my career and I know it. What I can promise is that I show up curious, ask the right questions, and pick things up quickly.</div></div>
+      <div class="rv wcard"><span class="wico">⚡</span><div class="wtitle">Decent Foundation</div><div class="wdesc">University gave me exposure to a lot — web, AI, robotics, networks, compilers. I'm not an expert in any of them, but I'm not starting from zero either.</div></div>
+      <div class="rv wcard"><span class="wico">🔧</span><div class="wtitle">I Actually Build Things</div><div class="wdesc">I tinker. I've finished a thesis, a browser game, and a few web projects — nothing groundbreaking, but real things that work.</div></div>
+      <div class="rv wcard"><span class="wico">🤝</span><div class="wtitle">Easy to Work With</div><div class="wdesc">I've worked in teams, volunteered, and done leadership programs. I'm not difficult — I take feedback well and I try to be useful wherever I'm placed.</div></div>
+      <div class="rv wcard"><span class="wico">🎯</span><div class="wtitle">Not Picky</div><div class="wdesc">I'm open to most roles and domains. I don't have a rigid plan — if the work is meaningful and I can grow, I'm genuinely interested.</div></div>
+      <div class="rv wcard"><span class="wico">💬</span><div class="wtitle">Low Risk, Honest</div><div class="wdesc">I won't oversell myself. I'll tell you what I know, what I don't, and what I'm working on. No surprises after you hire me.</div></div>
     </div>
     <div class="rv wstats">
       <div class="wst"><div class="wstn" data-count="3">0</div><div class="wstl">Awards Won</div></div>
-      <div class="wst"><div class="wstn" data-count="6">0</div><div class="wstl">Leadership Certs</div></div>
-      <div class="wst"><div class="wstn" data-count="20">0</div><div class="wstl">Technologies</div></div>
-      <div class="wst"><div class="wstn" style="font-size:54px">∞</div><div class="wstl">Adaptability</div></div>
+      <div class="wst"><div class="wstn" data-count="4">0</div><div class="wstl">Years Exploring CS</div></div>
+      <div class="wst"><div class="wstn" data-count="20">0</div><div class="wstl">Technologies Touched</div></div>
+      <div class="wst"><div class="wstn" style="font-size:54px">✓</div><div class="wstl">Honest & Reliable</div></div>
     </div>
   </div>
 </section>
@@ -985,17 +995,74 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   <div class="sec-num">08</div>
   <div class="wrap">
     <div class="eyebrow">awards.log</div>
-    <h2 class="sec-h split-h">Awards &amp; <em>Leadership</em></h2>
+    <h2 class="sec-h split-h">Awards and <em>Certificates</em></h2>
     <div class="whydg">
-      <div class="rv wcard"><span class="wico">🥇</span><div class="wtitle">1st Place · DRMC Tech Carnival 2022</div><div class="wdesc">Achieved first place in the project display event at the 5th DRMC International Tech Carnival 2022.</div></div>
-      <div class="rv wcard"><span class="wico">🥇</span><div class="wtitle">Gold Medal · WICE 2023</div><div class="wdesc">Won a gold medal at the World Innovation Competition and Exhibition (WICE) 2023, organized by IYSA in Malaysia.</div></div>
-      <div class="rv wcard"><span class="wico">🤿</span><div class="wtitle">Underwater Robotics Workshop · 2024</div><div class="wdesc">Completed "Dive Into Underwater Robotics: Exploring The Depths With DUBO Tech," hosted by IEEE BRACU Student Branch.</div></div>
-      <div class="rv wcard"><span class="wico">🌉</span><div class="wtitle">BYLC Leadership Training · 2021</div><div class="wdesc">Completed "Building Bridges through Leadership Training 2021" program held by Bangladesh Youth Leadership Center (BYLC).</div></div>
-      <div class="rv wcard"><span class="wico">🌐</span><div class="wtitle">MUN Delegate · 2022</div><div class="wdesc">Attended BUP International Model United Nations 2022 as a delegate of ECOSOC, representing Bahrain.</div></div>
-      <div class="rv wcard"><span class="wico">🏅</span><div class="wtitle">Duke of Edinburgh Award · 2023</div><div class="wdesc">Attained the Bronze Standard of the Duke of Edinburgh's International Award 2023.</div></div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/WICE.png')">
+          <img src="certificates/WICE.png" alt="WICE 2023" class="cert-thumb"/>
+        </div>
+        <span class="wico">🥇</span><div class="wtitle">Gold Medal · WICE 2023</div>
+        <div class="wdesc">Won a gold medal at the World Innovation Competition and Exhibition (WICE) 2023, organized by IYSA in Malaysia.</div>
+      </div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/DRMC.png')">
+          <img src="certificates/DRMC.png" alt="DRMC 2022" class="cert-thumb"/>
+        </div>
+        <span class="wico">🥇</span><div class="wtitle">1st Place · DRMC Tech Carnival 2022</div>
+        <div class="wdesc">Achieved first place in the project display event at the 5th DRMC International Tech Carnival 2022.</div>
+      </div>      
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/Duke.png')">
+          <img src="certificates/Duke.png" alt="Duke of Edinburgh" class="cert-thumb"/>
+        </div>
+        <span class="wico">🏅</span><div class="wtitle">Duke of Edinburgh Award · 2023</div>
+        <div class="wdesc">Attained the Bronze Standard of the Duke of Edinburgh's International Award 2023.</div>
+      </div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/BUP_MUN.png')">
+          <img src="certificates/BUP_MUN.png" alt="BUP MUN" class="cert-thumb"/>
+        </div>
+        <span class="wico">🌐</span><div class="wtitle">MUN Delegate · 2022</div>
+        <div class="wdesc">Attended BUP International Model United Nations 2022 as a delegate of ECOSOC, representing Bahrain.</div>
+      </div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/BYLC.png')">
+          <img src="certificates/BYLC.png" alt="BYLC" class="cert-thumb"/>
+        </div>
+        <span class="wico">🌉</span><div class="wtitle">BBLT33 Leadership Training · 2021</div>
+        <div class="wdesc">Completed Building Bridges through Leadership Training 2021 program held by BYLC.</div>
+      </div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/Taekwondo.png')">
+          <img src="certificates/Taekwondo.png" alt="Taekwondo" class="cert-thumb"/>
+        </div>
+        <span class="wico">🥋</span><div class="wtitle">Taekwondo Certificate</div>
+        <div class="wdesc">Certified achievement in Taekwondo.</div>
+      </div>
+
+      <div class="rv wcard">
+        <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/RUET.png')">
+          <img src="certificates/RUET.png" alt="RUET" class="cert-thumb"/>
+        </div>
+        <span class="wico">🏆</span><div class="wtitle">RUET Competition</div>
+        <div class="wdesc">Participated and achieved recognition at a competition held at Rajshahi University of Engineering & Technology (RUET).</div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<!-- Certificate Lightbox -->
+<div id="cert-lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9000;align-items:center;justify-content:center;cursor:none;">
+  <img id="cert-lightbox-img" src="" alt="" style="max-width:90vw;max-height:90vh;object-fit:contain;box-shadow:0 0 60px rgba(0,212,255,.2);"/>
+  <div style="position:absolute;top:24px;right:32px;font-size:11px;letter-spacing:2px;color:var(--dim)">ESC OR CLICK TO CLOSE</div>
+</div>
 
 <!-- ⑨ CONTACT -->
 <section class="sec" id="contact">
@@ -1353,7 +1420,7 @@ function initReveal() {
       document.querySelectorAll('[data-count]').forEach(function(el) {
         var t = +el.dataset.count;
         anime({ targets: el, innerHTML: [0, t], round: 1, duration: 1800, easing: 'easeOutExpo',
-          update: function() { el.innerHTML = Math.round(el.innerHTML) + '+'; }
+          update: function() { el.innerHTML = Math.round(el.innerHTML); }
         });
       });
     });
@@ -1441,6 +1508,15 @@ if (isTouch) {
   if (labelElT) labelElT.style.display = 'none';
 }
 
+function openCert(src) {
+  var lb = document.getElementById('cert-lightbox');
+  document.getElementById('cert-lightbox-img').src = src;
+  lb.style.display = 'flex';
+}
+function closeCert() {
+  document.getElementById('cert-lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeCert(); });
 </script>
 </body>
 </html>
