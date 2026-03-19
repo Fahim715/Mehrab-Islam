@@ -32,7 +32,7 @@
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg); color: var(--text);
-  font-family: var(--ff); font-size: 13px; line-height: 1.7;
+  font-family: var(--ff); font-size: 15px; line-height: 1.7;
   overflow-x: hidden; cursor: none;
   transition: background .3s, color .3s;
   padding-bottom: 22px;
@@ -285,7 +285,8 @@ body {
 .tldt { font-size: 10px; color: var(--dim); letter-spacing: 1px; margin-left: auto; }
 .tlp { font-size: 12px; color: var(--dim); line-height: 1.9; margin-bottom: 12px; }
 .tltags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tltag { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; border: 1px solid var(--border); padding: 3px 9px; color: var(--dim); }
+.tltag { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; border: 1px solid var(--border); padding: 3px 9px; color: var(--dim); transition: color .2s, border-color .2s, box-shadow .2s, background .2s; cursor: none; }
+.tltag:hover { color: var(--cyan); border-color: var(--cyan); background: rgba(0,212,255,.06); box-shadow: 0 0 10px rgba(0,212,255,.25), inset 0 0 8px rgba(0,212,255,.06); }
 
 /* ── SKILLS ── */
 .skg { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; }
@@ -701,23 +702,31 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
       <div class="rv tli">
         <div class="tln"></div>
         <div class="tlb">
-          <div class="tlh"><div class="tlt">Volunteer Robotic Engineer</div><div class="tlco">Team Atlas</div><div class="tldt">2 Years</div></div>
-          <p class="tlp">Served as a volunteer robotic engineer at Team Atlas, a software company in Bangladesh, for 2 years. Worked on robotics projects involving hardware integration, programming, and system design.</p>
+          <div class="tlh"><div class="tlt">Volunteer Robotic Engineer</div><div class="tlco"><a href="https://bd.linkedin.com/company/team-atlasbd" target="_blank" style="color:var(--cyan);text-decoration:none;">Team Atlas</a></div><div class="tldt">Jan 2022 - Sept 2023</div></div>
+          <p class="tlp">Volunteered as a robotic engineer at Team Atlas, a software company in Bangladesh. Worked on robotics projects involving hardware integration, embedded programming, and system design — my first real hands-on experience with engineering outside the classroom.</p>
           <div class="tltags"><span class="tltag">Arduino</span><span class="tltag">Raspberry Pi</span><span class="tltag">Robotics</span><span class="tltag">Embedded Systems</span></div>
         </div>
       </div>
       <div class="rv tli">
         <div class="tln d"></div>
         <div class="tlb">
-          <div class="tlh"><div class="tlt">Thesis Research</div><div class="tlco">BRAC University</div><div class="tldt">2025 – Feb 2026</div></div>
-          <p class="tlp">Led research on code obfuscation as a software protection strategy. Developed an obfuscation tool that transforms source code to make it significantly harder to reverse-engineer or analyze — complex enough to deter malicious actors.</p>
-          <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">C/C++</span><span class="tltag">Research</span></div>
+          <div class="tlh"><div class="tlt">Undergraduate Thesis</div><div class="tlco"><a href="https://www.bracu.ac.bd" target="_blank" style="color:var(--cyan);text-decoration:none;">BRAC University</a></div><div class="tldt">Jun 2024 – Jun 2025</div></div>
+          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer. Feel free to <a href="https://dspace.bracu.ac.bd/xmlui/handle/10361/26708" target="_blank" style="color:var(--pink);text-decoration:none;">go through our paper</a> if you're curious.</p>
+          <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">Multithreading</span><span class="tltag">C/C++</span><span class="tltag">Research</span></div>
         </div>
       </div>
       <div class="rv tli">
         <div class="tln d"></div>
         <div class="tlb">
-          <div class="tlh"><div class="tlt">Delegate · ECOSOC</div><div class="tlco">BUP International Model United Nations</div><div class="tldt">2022</div></div>
+          <div class="tlh"><div class="tlt">Leadership Training · BBLT33</div><div class="tlco"><a href="https://bgn.bylc.org/" target="_blank" style="color:var(--cyan);text-decoration:none;">BYLC</a></div><div class="tldt">Oct 2021 - Dec 2021</div></div>
+          <p class="tlp">Participated in the <strong>Building Bridges through Leadership Training (BBLT33)</strong> program hosted by <a href="https://bgn.bylc.org/" target="_blank" style="color:var(--cyan);text-decoration:none;">BYLC</a>, mentored by <a href="https://www.linkedin.com/in/sabrina-hasan-rakhi-10894a1a0/" target="_blank" style="color:var(--cyan);text-decoration:none;">Sabrina Hasan Rakhi</a>. Developed leadership, public speaking, and networking skills throughout the program. At the final stage, my group and I co-founded <a href="https://www.facebook.com/AlliedAgainstDengue" target="_blank" style="color:var(--cyan);text-decoration:none;">Allied Against Dengue</a> — a youth organization raising awareness about Dengue fever. We ran awareness campaigns across Dhaka and Chattogram, and I hosted a webinar as part of the initiative.</p>
+          <div class="tltags"><span class="tltag">Leadership</span><span class="tltag">Public Speaking</span><span class="tltag">Networking</span><span class="tltag">Community Work</span></div>
+        </div>
+      </div>
+      <div class="rv tli">
+        <div class="tln d"></div>
+        <div class="tlb">
+          <div class="tlh"><div class="tlt">Delegate · ECOSOC</div><div class="tlco"><a href="https://bup.edu.bd/events/details/34" target="_blank" style="color:var(--cyan);text-decoration:none;">BUP International Model United Nations</a></div><div class="tldt">Feb 2022</div></div>
           <p class="tlp">Attended BUP International MUN 2022 as a delegate of the Economic and Social Council (ECOSOC), representing Bahrain. Engaged in international policy debate and diplomatic negotiation.</p>
           <div class="tltags"><span class="tltag">Leadership</span><span class="tltag">Diplomacy</span><span class="tltag">MUN</span></div>
         </div>
