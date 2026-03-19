@@ -561,7 +561,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
 <!-- BOOT -->
  <!-- inosuke -->
 
-<div id="boot">
+<!-- <div id="boot">
   <div class="bl hi" id="b0">PORTFOLIO_OS v2.1 — Initializing...</div>
   <div class="bl ok" id="b1">Loading kernel modules</div>
   <div class="bl ok" id="b2">Mounting assets</div>
@@ -574,7 +574,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     <div class="bbar"><div class="bfill" id="bb"></div></div>
     <span id="bp" style="color:var(--cyan);font-size:11px">0%</span>
   </div>
-</div>
+</div> -->
 
 
 <!-- NAV -->
@@ -712,7 +712,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="tln d"></div>
         <div class="tlb">
           <div class="tlh"><div class="tlt">Undergraduate Thesis</div><div class="tlco"><a href="https://www.bracu.ac.bd" target="_blank" style="color:var(--cyan);text-decoration:none;">BRAC University</a></div><div class="tldt">Jun 2024 – Jun 2025</div></div>
-          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer. Feel free to <a href="https://dspace.bracu.ac.bd/xmlui/handle/10361/26708" target="_blank" style="color:var(--pink);text-decoration:none;">go through our paper</a> if you're curious.</p>
+          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer. You can <a href="https://dspace.bracu.ac.bd/xmlui/handle/10361/26708" target="_blank" style="color:var(--pink);text-decoration:none;">click here to read the paper</a> if you're curious.</p>
           <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">Multithreading</span><span class="tltag">C/C++</span><span class="tltag">Research</span></div>
         </div>
       </div>
@@ -1258,29 +1258,29 @@ document.querySelectorAll('.split-h').forEach(function(el) {
 /* ── BOOT (display only — no side effects) ── */
 // inosuke
 
-(function() {
-  var bootDelays = [0, 110, 210, 320, 430, 530, 650, 780];
-  bootDelays.forEach(function(t, i) {
-    var el = document.getElementById('b' + i);
-    if (el) setTimeout(function() { el.classList.add('s'); }, t);
-  });
-  var bpwEl = document.getElementById('b8');
-  setTimeout(function() {
-    bpwEl.classList.add('s');
-    var p = 0;
-    var iv = setInterval(function() {
-      p += Math.random() * 10 + 3;
-      if (p >= 100) { p = 100; clearInterval(iv); }
-      document.getElementById('bb').style.width = p + '%';
-      document.getElementById('bp').textContent = Math.floor(p) + '%';
-    }, 35);
-  }, 800);
-  setTimeout(function() {
-    var boot = document.getElementById('boot');
-    boot.classList.add('hide');
-    setTimeout(function() { boot.style.display = 'none'; }, 520);
-  }, 2500);
-})();
+// (function() {
+//   var bootDelays = [0, 110, 210, 320, 430, 530, 650, 780];
+//   bootDelays.forEach(function(t, i) {
+//     var el = document.getElementById('b' + i);
+//     if (el) setTimeout(function() { el.classList.add('s'); }, t);
+//   });
+//   var bpwEl = document.getElementById('b8');
+//   setTimeout(function() {
+//     bpwEl.classList.add('s');
+//     var p = 0;
+//     var iv = setInterval(function() {
+//       p += Math.random() * 10 + 3;
+//       if (p >= 100) { p = 100; clearInterval(iv); }
+//       document.getElementById('bb').style.width = p + '%';
+//       document.getElementById('bp').textContent = Math.floor(p) + '%';
+//     }, 35);
+//   }, 800);
+//   setTimeout(function() {
+//     var boot = document.getElementById('boot');
+//     boot.classList.add('hide');
+//     setTimeout(function() { boot.style.display = 'none'; }, 520);
+//   }, 2500);
+// })();
 
 
 /* ── HERO ENTRANCE ── */
