@@ -497,7 +497,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   body { cursor: auto !important; }
   a, button, .btn, .pcard, .gcard, .acard, .citem,
   .wcard, .plnk, .chip, .sktag, .nlnk, .nlogo,
-  .csub, #thm, #hamburger { cursor: pointer !important; }
+  .csub, #thm, #hamburger, .cert-img-wrap { cursor: pointer !important; }
   .cinput { cursor: text !important; }
   .tilt-card { transform: none !important; }
 }
@@ -551,7 +551,8 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
 }
 
 .cert-img-wrap { width:100%; height:120px; overflow:hidden; margin-bottom:14px; cursor:none; position:relative; }
-.cert-img-wrap::after { content:''; position:absolute; inset:0; background:rgba(0,212,255,0); transition:background .2s; }
+/* LOL ALERT */
+.cert-img-wrap::after { content:''; position:absolute; inset:0; background:rgba(0,212,255,0); transition:background .2s; pointer-events:none; }
 .cert-img-wrap:hover::after { background:rgba(0,212,255,.08); }
 .cert-thumb { width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s; }
 .cert-img-wrap:hover .cert-thumb { transform:scale(1.04); }
@@ -1018,7 +1019,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/Duke.png')">
           <img src="certificates/Duke.png" alt="Duke of Edinburgh" class="cert-thumb"/>
         </div>
-        <span class="wico">🏅</span><div class="wtitle">Duke of Edinburgh Award · 2023</div>
+        <span class="wico">🥉</span><div class="wtitle">Duke of Edinburgh Award · 2023</div>
         <div class="wdesc">Attained the Bronze Standard of the Duke of Edinburgh's International Award 2023.</div>
       </div>
 
@@ -1026,7 +1027,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/BUP_MUN.png')">
           <img src="certificates/BUP_MUN.png" alt="BUP MUN" class="cert-thumb"/>
         </div>
-        <span class="wico">🌐</span><div class="wtitle">MUN Delegate · 2022</div>
+        <span class="wico"></span><div class="wtitle">MUN Delegate · 2022</div>
         <div class="wdesc">Attended BUP International Model United Nations 2022 as a delegate of ECOSOC, representing Bahrain.</div>
       </div>
 
@@ -1034,7 +1035,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/BYLC.png')">
           <img src="certificates/BYLC.png" alt="BYLC" class="cert-thumb"/>
         </div>
-        <span class="wico">🌉</span><div class="wtitle">BBLT33 Leadership Training · 2021</div>
+        <span class="wico"></span><div class="wtitle">BBLT33 Leadership Training · 2021</div>
         <div class="wdesc">Completed Building Bridges through Leadership Training 2021 program held by BYLC.</div>
       </div>
 
@@ -1042,7 +1043,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/Taekwondo.png')">
           <img src="certificates/Taekwondo.png" alt="Taekwondo" class="cert-thumb"/>
         </div>
-        <span class="wico">🥋</span><div class="wtitle">Taekwondo Certificate</div>
+        <span class="wico"></span><div class="wtitle">Taekwondo Certificate</div>
         <div class="wdesc">Certified achievement in Taekwondo.</div>
       </div>
 
@@ -1050,7 +1051,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="cert-img-wrap" data-cursor-label="CLICK FOR FULL VIEW" onclick="openCert('certificates/RUET.png')">
           <img src="certificates/RUET.png" alt="RUET" class="cert-thumb"/>
         </div>
-        <span class="wico">🏆</span><div class="wtitle">RUET Competition</div>
+        <span class="wico"></span><div class="wtitle">RUET Competition</div>
         <div class="wdesc">Participated and achieved recognition at a competition held at Rajshahi University of Engineering & Technology (RUET).</div>
       </div>
 
