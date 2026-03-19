@@ -1084,16 +1084,15 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
       <div class="rv cform tilt-card"><div class="tilt-shine"></div>
         <div class="cfhead">■ <span>SEND_MESSAGE</span> — encrypted</div>
         <div class="cfbody">
-          <form action="https://formsubmit.co/mehrabofficial321@gmail.com" method="POST">
+          <form id="contact-form" action="https://formsubmit.co/ajax/mehrabofficial321@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://fahim715.github.io/">
             <div class="crow2">
               <div class="cgrp"><label class="clbl">name</label><input type="text" name="name" class="cinput" placeholder="your_name" required></div>
               <div class="cgrp"><label class="clbl">email</label><input type="email" name="email" class="cinput" placeholder="user@domain.com" required></div>
             </div>
             <div class="cgrp"><label class="clbl">subject</label><input type="text" name="subject" class="cinput" placeholder="project_inquiry"></div>
             <div class="cgrp"><label class="clbl">message</label><textarea name="message" class="cinput ctarea" placeholder="// Describe your project or opportunity..." required></textarea></div>
-            <button type="submit" class="csub"><span>▶ SEND MESSAGE</span></button>
+            <button type="button" class="csub" id="send-btn" onclick="submitForm()"><span id="send-btn-text">▶ SEND MESSAGE</span></button>
             <div style="font-size:9px;letter-spacing:1px;color:var(--dim);text-align:center;margin-top:10px">// No spam · Response &lt; 24h</div>
           </form>
         </div>
@@ -1443,10 +1442,33 @@ function toggleTheme() {
 }
 
 /* ── FORM ── */
-function handleSend(btn) {
-  btn.querySelector('span').textContent = '✓ SENT — AWAITING RESPONSE';
-  anime({ targets: btn, scale: [1, 1.02, 1], duration: 400, easing: 'easeInOutSine' });
-  setTimeout(function() { btn.querySelector('span').textContent = '▶ SEND MESSAGE'; }, 4000);
+function submitForm() {
+  var form = document.getElementById('contact-form');
+  var btn = document.getElementById('send-btn');
+  var btnText = document.getElementById('send-btn-text');
+  var data = new FormData(form);
+  btnText.textContent = '● SENDING...';
+  btn.disabled = true;
+  fetch(form.action, { method: 'POST', body: data })
+    .then(function(res) { return res.json(); })
+    .then(function() {
+      btnText.textContent = '✓ MESSAGE SENT';
+      btn.style.background = 'var(--green)';
+      btn.style.color = '#000';
+      anime({ targets: btn, scale: [1, 1.02, 1], duration: 400, easing: 'easeInOutSine' });
+      setTimeout(function() {
+        btnText.textContent = '▶ SEND MESSAGE';
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+        form.reset();
+      }, 3000);
+    })
+    .catch(function() {
+      btnText.textContent = '✕ FAILED — TRY AGAIN';
+      btn.disabled = false;
+      setTimeout(function() { btnText.textContent = '▶ SEND MESSAGE'; }, 3000);
+    });
 }
 
 /* ── STATUS BAR TYPEWRITER ── */
