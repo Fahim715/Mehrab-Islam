@@ -1054,7 +1054,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     <div class="rv wstats">
       <div class="wst"><div class="wstn" data-count="3">0</div><div class="wstl">Awards Won</div></div>
       <div class="wst"><div class="wstn" data-count="4">0</div><div class="wstl">Years Exploring CS</div></div>
-      <div class="wst"><div class="wstn" data-count="20">0</div><div class="wstl">Technologies Touched</div></div>
+      <div class="wst"><div class="wstn" data-count="20" data-suffix="+">0</div><div class="wstl">Technologies Touched</div></div>
       <div class="wst"><div class="wstn" style="font-size:54px">✓</div><div class="wstl">Honest & Reliable</div></div>
     </div>
   </div>
@@ -1500,8 +1500,9 @@ function initReveal() {
       counted = true;
       document.querySelectorAll('[data-count]').forEach(function(el) {
         var t = +el.dataset.count;
+        var suffix = el.dataset.suffix || '';
         anime({ targets: el, innerHTML: [0, t], round: 1, duration: 1800, easing: 'easeOutExpo',
-          update: function() { el.innerHTML = Math.round(el.innerHTML); }
+            update: function() { el.innerHTML = Math.round(el.innerHTML) + suffix; }
         });
       });
     });
