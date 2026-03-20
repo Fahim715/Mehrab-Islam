@@ -615,7 +615,8 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   <div class="bl ok" id="b5">Rendering UI</div>
   <div class="bl warn" id="b6">WARNING: All data is placeholder</div>
   <div class="bl hi" id="b7">SYSTEM READY.</div>
-  <div class="bpw" id="b8">
+  <div class="bl" id="b8" style="color: var(--green);">WELCOME</div>
+  <div class="bpw" id="bpw">
     <div class="bbar"><div class="bfill" id="bb"></div></div>
     <span id="bp" style="color:var(--cyan);font-size:11px">0%</span>
   </div>
@@ -1406,12 +1407,12 @@ document.querySelectorAll('.split-h').forEach(function(el) {
 // inosuke
 
 (function() {
-  var bootDelays = [0, 110, 210, 320, 430, 530, 650, 780];
+  var bootDelays = [0, 110, 210, 320, 430, 530, 650, 780, 900];
   bootDelays.forEach(function(t, i) {
     var el = document.getElementById('b' + i);
     if (el) setTimeout(function() { el.classList.add('s'); }, t);
   });
-  var bpwEl = document.getElementById('b8');
+  var bpwEl = document.getElementById('bpw');
   setTimeout(function() {
     bpwEl.classList.add('s');
     var p = 0;
