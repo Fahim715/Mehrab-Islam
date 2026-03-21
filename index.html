@@ -963,6 +963,15 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="pdesc">Student Life Cycle Management System for BRAC University. Features CGPA Calculator, Bus Routes, Realtime Notifications, and BracU Wingman — a personal deadline buddy.</div>
       </div>
       <div class="rv pcard tilt-card" data-cursor-label="OPEN">
+    <div class="tilt-shine"></div><div class="pcard-glow"></div>
+      <div class="pcardtop">
+      <div class="pico"><img src="project/chain-work.png" alt="ChainWork" style="width:48px;height:48px;object-fit:cover;border-radius:8px;"></div>
+      <div class="plnks"><a href="https://github.com/Fahim715/chain-work" class="plnk" target="_blank">GitHub</a></div>
+    </div>
+    <div class="pname">ChainWork</div>
+    <div class="pdesc">Trustless freelance marketplace on Ethereum. Clients post jobs, freelancers bid, and funds are locked in smart contract escrow — with an on-chain arbiter for dispute resolution. No intermediaries.</div>
+    </div>
+      <div class="rv pcard tilt-card" data-cursor-label="OPEN">
         <div class="tilt-shine"></div><div class="pcard-glow"></div>
         <div class="pcardtop">
           <div class="pico"><img src="project/nextbot.png" alt="NexBot Game" style="width:48px;height:48px;object-fit:cover;border-radius:8px;"></div>
@@ -998,6 +1007,26 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="pname">Honeypot Demo</div>
         <div class="pdesc">Python-based honeypot simulator that mimics FTP, SSH, HTTP, and HTTPS services, logs all incoming connection attempts, and analyzes attack patterns with a reporting tool.</div>
       </div>
+      <div class="rv pcard tilt-card" data-cursor-label="OPEN">
+        <div class="tilt-shine"></div><div class="pcard-glow"></div>
+        <div class="pcardtop">
+          <div class="pico"><img src="project/baymax.png" alt="Lil Baymax" style="width:48px;height:48px;object-fit:cover;border-radius:8px;"></div>
+          <div class="plnks"><a href="https://github.com/Fahim715/Lil-Baymax" class="plnk" target="_blank">GitHub</a></div>
+        </div>
+        <div class="pname">Lil Baymax</div>
+        <div class="pdesc">Two-wheeled self-balancing medical assistant robot built with Arduino and ESP32. Monitors body temperature, heart rate, and SpO₂ in real time — alerts via buzzer when vitals cross safe thresholds.</div>
+      </div>
+      <div class="rv pcard tilt-card" data-cursor-label="OPEN">
+  <div class="tilt-shine"></div><div class="pcard-glow"></div>
+  <div class="pcardtop">
+    <div class="pico"><img src="project/bizzbuzz.png" alt="BizzBuzz" style="width:48px;height:48px;object-fit:cover;border-radius:8px;"></div>
+    <div class="plnks"><a href="https://github.com/Fahim715/BizzBuzz" class="plnk" target="_blank">GitHub</a></div>
+  </div>
+  <div class="pname">BizzBuzz</div>
+  <div class="pdesc">Full-stack e-commerce platform built with React, Express, and MySQL. Includes authentication, product management, cart & checkout, customer reviews, and a complaint handling system.</div>
+</div>
+      
+    </div>
     </div>
   </div>
 </section>
@@ -1306,6 +1335,27 @@ document.querySelectorAll('.chip, .skchip').forEach(function(el) {
   });
 });
 } /* end !isTouch */
+
+/* ── FEATURED PROJECT CARD LINKING ── */
+document.querySelectorAll('#projects .pcard').forEach(function(card) {
+  var githubLink = card.querySelector('.plnk');
+  if (!githubLink) return;
+
+  card.setAttribute('role', 'link');
+  card.setAttribute('tabindex', '0');
+
+  card.addEventListener('click', function(e) {
+    if (e.target.closest('.plnk')) return;
+    window.open(githubLink.href, '_blank', 'noopener,noreferrer');
+  });
+
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      window.open(githubLink.href, '_blank', 'noopener,noreferrer');
+    }
+  });
+});
 
 /* ── TEXT SCRAMBLE (nav links, desktop only) ── */
 if (!isTouch) {
