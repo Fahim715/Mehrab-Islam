@@ -639,6 +639,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     <a class="nlnk" data-scramble href="#games">Games</a>
     <a class="nlnk" data-scramble href="#whyme">Why Me</a>
     <a class="nlnk" data-scramble href="#certifications">Awards</a>
+    <a class="nlnk" data-scramble href="#publications">Publications</a>
     <a class="nlnk" data-scramble href="#contact">Contact</a>
   </div>
   <div class="nright">
@@ -768,6 +769,14 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     <div class="tl">
       <div class="rv tli">
         <div class="tln"></div>
+          <div class="tlb">
+            <div class="tlh"><div class="tlt">Research Engineer Intern — Brain Computer Interface (BCI) Research</div><div class="tlco"><a href="https://iriic.uiu.ac.bd/" target="_blank" style="color:var(--cyan);text-decoration:none;">AIMS Lab, IRIIC, United International University (UIU)</a></div><div class="tldt">Jul 2026 – Present</div></div>
+            <p class="tlp">Working as a Research Engineer Intern at the AIMS Lab, IRIIC, UIU — focused on Brain-Computer Interface (BCI) research, covering signal acquisition, processing, and machine learning for neural interface applications.</p>
+          <div class="tltags"><span class="tltag">BCI</span><span class="tltag">Signal Processing</span><span class="tltag">Machine Learning</span><span class="tltag">Research</span></div>
+        </div>
+      </div>
+      <div class="rv tli">
+        <div class="tln"></div>
         <div class="tlb">
           <div class="tlh"><div class="tlt">Volunteer Robotic Engineer</div><div class="tlco"><a href="https://bd.linkedin.com/company/team-atlasbd" target="_blank" style="color:var(--cyan);text-decoration:none;">Team Atlas</a></div><div class="tldt">Jan 2022 - Sept 2023</div></div>
           <p class="tlp">Volunteered as a robotic engineer at Team Atlas, a software company in Bangladesh. Worked on robotics projects involving hardware integration, embedded programming, and system design — my first real hands-on experience with engineering outside the classroom.</p>
@@ -778,9 +787,8 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
         <div class="tln d"></div>
         <div class="tlb">
           <div class="tlh"><div class="tlt">Undergraduate Thesis</div><div class="tlco"><a href="https://www.bracu.ac.bd" target="_blank" style="color:var(--cyan);text-decoration:none;">BRAC University</a></div><div class="tldt">Jun 2024 – Jun 2025</div></div>
-          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer.
-          <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">Multithreading</span><span class="tltag">C/C++</span><span class="tltag">Research</span></div>
-        </div>
+          <p class="tlp">Conducted thesis research under the supervision of <a href="https://www.researchgate.net/profile/Muhammad-Yanhaona" target="_blank" style="color:var(--cyan);text-decoration:none;">Professor Muhammad Nur Yanhaona</a> on <strong>"Multithreading for obfuscating code against dynamic analysis and reverse engineering"</strong> — exploring how multithreading can be leveraged to make software significantly harder to reverse-engineer. This work was later published — see <a href="https://ieeexplore.ieee.org/document/11580097" target="_blank" style="color:var(--cyan);text-decoration:none;">IEEE Xplore</a>.
+          <div class="tltags"><span class="tltag">Security</span><span class="tltag">Compiler Design</span><span class="tltag">Multithreading</span><span class="tltag">C/C++</span><span class="tltag">Research</span><span class="tltag">Published</span></div>        </div>
       </div>
       <div class="rv tli">
         <div class="tln d"></div>
@@ -1109,6 +1117,27 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
   </div>
 </section>
 
+<!-- ⑨ PUBLICATIONS -->
+<section class="sec" id="publications">
+  <div class="sec-num">09</div>
+  <div class="wrap">
+    <div class="eyebrow">publications.json</div>
+    <h2 class="sec-h split-h">Published <em>Papers</em></h2>
+    <div class="pjg">
+      <a href="https://ieeexplore.ieee.org/document/11580097" target="_blank" class="rv pcard tilt-card" data-cursor-label="Click To View" style="text-decoration:none; overflow:hidden; padding:0;">
+        <div class="tilt-shine"></div><div class="pcard-glow"></div>
+        <img src="images/mny01.png" alt="Paper thumbnail" style="width:100%; height:180px; object-fit:cover; display:block; position:relative; z-index:1;">
+        <div style="padding:20px; position:relative; z-index:1;">
+          <div class="plnks"><span class="plnk">IEEE Xplore</span></div>
+          <div class="pname">Multithreading for Obfuscating Code against Dynamic Analysis and Reverse Engineering</div>
+          <div class="pdesc" style="margin-bottom:0;">Abstract:
+Code obfuscation secures a software by transforming its source code in a way that is difficult for humans to do reverse engineering and dynamic analysis while allowing the program to execute as intended. However, the available obfuscation tools modify the code's structure in a single-thread. Due to this limitation, attackers can predict the control flow of the program, leaving the protective alternation in a vulnerable state. As a solution to this problem, we propose a new obfuscation mechanism for C++ programs based on a multithreading method. This introduces randomness into the code execution path, making the control flow significantly more difficult to analyze. Additionally, synchronization is used to prevent asynchronous thread execution from producing unexpected results. In this paper, we have presented our system and demonstrated how this multithreaded code obfuscation makes the analysis of software much harder.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CERTIFICATIONS & LEADERSHIP -->
 <section class="sec" id="certifications">
   <div class="sec-num">08</div>
@@ -1199,6 +1228,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 48px; display: flex;
     </div>
   </div>
 </section>
+
 
 <!-- Certificate Lightbox -->
 <div id="cert-lightbox" onclick="closeCert()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9000;align-items:center;justify-content:center;cursor:none;">
@@ -1341,7 +1371,7 @@ document.querySelectorAll('input, textarea').forEach(function(el) {
 var progEl  = document.getElementById('prog');
 var sbSecEl = document.getElementById('sb-sec');
 var navLnks = document.querySelectorAll('.nlnk');
-var secIds  = ['start','about','experience','skills','projects','games','whyme','certifications','contact'];
+var secIds  = ['start','about','experience','skills','projects','games','whyme','certifications','publications','contact'];
 
 window.addEventListener('scroll', function() {
   var s = window.scrollY;
